@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+
+.k-step {
+    border: 1px solid #FAFAFA;
+    border-bottom: none;
+    border-radius: 5px;
+    padding-left: 16px;
+}
+.k-step-last {
+    border-bottom: 1px solid #FAFAFA;
+}
+.k-step-current {
+    padding-left: 12px;
+    border-radius: 5px;
+    border-left: 5px solid #3F90C8;
+}
+.k-step-link {
+    line-height: 54px;
+}
+.k-stepper .k-step-current .k-step-indicator, .k-stepper .k-step-current:hover .k-step-indicator, .k-stepper .k-step-current.k-step-hover .k-step-indicator {
+    border-color: #3F90C8;
+    background-color: #3F90C8;
+}
+.k-stepper .k-step-current .k-step-text {
+    color: #3F90C8;
+}
+.k-stepper .k-step-done .k-step-indicator, .k-stepper .k-step-done:hover .k-step-indicator, .k-stepper .k-step-done.k-step-hover .k-step-indicator {
+    border-color: #3F90C8;
+    background-color: #3F90C8;
+}
+.k-stepper .k-step-success .k-step-indicator, .k-stepper .k-step-success:hover .k-step-indicator, .k-stepper .k-step-success.k-step-hover .k-step-indicator {
+    border-color: #45CA60;
+    background-color: #45CA60;
+}
+.step-body-container {
+    border: 1px solid #FAFAFA;
+    border-radius: 5px;
+}
+.k-stepper .k-step-label .k-step-text {
+    max-width: none;
+}
+.k-stepper .k-step-label {
+    max-width: none;
+}
+.k-progressbar {
+    display: none;
+}
+.k-button.next .k-icon {
+    margin-left: 5px;
+    order: 2;
+ }
+
+ .k-button {
+     font-size: 16px;
+     border-radius: 5px;
+    color: #428bca;
+    border-color: #428bca;
+    border-width: 2px;
+    background-color: white;
+    background-image: none;
+    min-width: 120px;
+ }
+ .k-button:hover {
+    color: white;
+    border-color: #428bca;
+    background-color:#428bca;
+    background-image: none;
+    min-width: 120px;
+ }

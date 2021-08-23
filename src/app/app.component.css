@@ -1,0 +1,14 @@
+
+.k-step {
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.test {
+    border: 2px solid red;
+}
+.k-stepper .k-step-label .k-step-text {
+    max-width: none;
+}
+.k-stepper .k-step-label {
+    max-width: none;
+}

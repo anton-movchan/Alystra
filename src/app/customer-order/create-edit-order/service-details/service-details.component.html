@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col">
+        <div style="line-height: 54px; height: 54px;" class="px-5 py-3">
+            <h6>SERVICE</h6>
+        </div>
+    </div>
+</div>  
+<div class="row g-0">
+    <div class="col">
+        <div><span class="k-form-separator m-0"></span></div>
+    </div>
+</div>
+<div class="px-5">
+    <ng-container [formGroup]="serviceDetails">
+        <div class="row">
+            <div class="col">
+                <kendo-formfield>
+                    <!-- <kendo-label text="SERVICE"></kendo-label>
+                    <kendo-dropdownlist formControlName="serviceSelector" #serviceSelector [data]="services">
+                    </kendo-dropdownlist> -->
+                    <kendo-label [for]="role" text="SERVICES"></kendo-label>
+                        <kendo-dropdownlist formControlName="role" #role [data]="services" [defaultItem]="'- select -'">
+                        </kendo-dropdownlist>
+                </kendo-formfield>
+            </div>
+            <div class="col"></div>
+        </div>
+    </ng-container>
+</div>

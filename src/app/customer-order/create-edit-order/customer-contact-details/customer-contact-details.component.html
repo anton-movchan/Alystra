@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col">
+        <div style="line-height: 54px; height: 54px;" class="px-5 py-3">
+            <h6>CUSTOMER AND CONTACT DETAILS</h6>
+        </div>
+    </div>
+</div>  
+<div class="row g-0">
+    <div class="col">
+        <div><span class="k-form-separator m-0"></span></div>
+    </div>
+</div>
+<div class="px-5">
+    <ng-container [formGroup]="customerAndContactDetails">
+        <div class="row">
+            <div class="col">
+                
+                <span>{{'CUSTOMER'}}</span>        
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <kendo-formfield>
+                    <kendo-label [for]="subCustomer" text="SUB-CUSTOMER"></kendo-label>
+                    <kendo-dropdownlist
+                        formControlName="subCustomer" 
+                        #subCustomer 
+                        [data]="subCustomers" 
+                        [defaultItem]="">
+                    </kendo-dropdownlist>
+                </kendo-formfield>
+            </div>
+            <div class="col">
+                <kendo-formfield>
+                    <kendo-label [for]="phone" text="PHONE"></kendo-label>
+                    <kendo-textbox formControlName="phone" #phone [clearButton]="true"></kendo-textbox>
+                </kendo-formfield>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <kendo-formfield>
+                    <kendo-label [for]="role" text="ROLE"></kendo-label>
+                    <kendo-dropdownlist formControlName="role" #role [data]="roles" [defaultItem]="'- select -'">
+                    </kendo-dropdownlist>
+                </kendo-formfield>
+            </div>
+            <div class="col">
+                <kendo-formfield>
+                    <kendo-label [for]="email" text="Email"></kendo-label>
+                    <kendo-textbox formControlName="email" #email [clearButton]="true"></kendo-textbox>
+                    <kendo-formerror *ngIf="customerAndContactDetails.controls.email.errors?.required">Email is required</kendo-formerror>
+                    <kendo-formerror *ngIf="customerAndContactDetails.controls.email.errors?.email">Not a valid email format</kendo-formerror>
+                </kendo-formfield>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <kendo-formfield>
+                    <kendo-label [for]="bookingName" text="BOOKING CONTACT NAME"> </kendo-label>
+                    <kendo-textbox formControlName="bookingName" #bookingName [clearButton]="true">
+                    </kendo-textbox>
+                </kendo-formfield>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        
+
+        
+    </ng-container>
+</div>  

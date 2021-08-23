@@ -1,0 +1,82 @@
+<div class="row g-0">
+    <div class="col-md-auto">
+        <kendo-stepper #stepper
+            [style.width.px]="350"
+            [steps]="steps"
+            [stepType]="'full'"
+            [linear]='true'
+            [orientation]="'vertical'">
+            <!-- <ng-template kendoStepperStepTemplate let-step let-i="index">
+            <div class="custom-step">
+                <span class='k-step-indicator'>
+                <span class='k-step-indicator-text'>{{i+1}}</span>
+                </span>
+                <span class='k-step-label'>
+                <span class='k-step-text'>{{step.label}}</span>
+                </span>
+            </div>
+        </ng-template> -->
+        </kendo-stepper>
+    </div>
+    <div class="col position-relative">
+        <div class="step-body-container h-100">
+            <div class="row g-0">
+                <div class="col-sm-12">
+                    <form class="k-form" [formGroup]="form">
+                        <app-customer-contact-details *ngIf="stepper.currentStep === 0" [customerAndContactDetails]="currentGroup"> </app-customer-contact-details>
+                        <!-- <app-customer-contact-details></app-customer-contact-details> -->
+                        <app-service-details *ngIf="stepper.currentStep === 1" [serviceDetails]="currentGroup"> </app-service-details>
+                        <!-- <app-service-details *ngIf="stepper.currentStep === 1" ></app-service-details> -->
+                    </form>
+                </div>
+            </div>
+            <div class="row position-absolute bottom-0 w-100 g-0">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div><span class="k-form-separator"></span></div>
+                        </div>
+                    </div>
+                    <div style="line-height: 54px; height: 54px;">
+                        <div class="row px-3">
+                            <div class="col-md-auto">
+                                <button kendoButton icon="arrow-left"
+                                    class="k-button prev"
+                                    *ngIf="stepper.currentStep !== 0"
+                                    (click)="prev()"
+                                    >
+                                        Previous
+                                </button>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col-md-auto">
+                                <button kendoButton icon="arrow-right"
+                                    class="k-button k-primary next"
+                                    (click)="next()"
+                                    *ngIf="stepper.currentStep !== 10"
+                                >
+                                    Next
+                              </button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>        
+        </div>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        
+    </div>
+    <div class="col-md-9"></div>
+</div>
+<div style='display: grid; grid-template-columns: 350px auto'>
+    <div style="display:inline-grid;">
+        
+    </div>
+    <div style="display:inline-grid;">
+
+    </div>
+  </div>
